@@ -8,7 +8,7 @@ RUN apt-get clean && apt-get update && apt-get install -y \
   clang-14 \
   clang-format-14 \
   llvm-14 \
-  lldb \
+  lldb \ 
   bats \
   valgrind
 
