@@ -9,27 +9,6 @@
 #include "kvlist.h"
 
 
-typedef void (*mapper_t)(kvpair_t* kv, kvlist_t* output);{
-    
-    // dived input  into smaller lists.
-    // ( fhfhfh ) 
-    // split onto every word and send to map reduce
-
-}
-typedef void (*reducer_t)(char* key, kvlist_t* list, kvlist_t* output){
-    // each pair has to have same key
-    //shuffle phase: reduce into one pair, increase count
-    //
-
-}
-
-void map_reduce(mapper_t mapper, size_t num_mapper, reducer_t reducer,
-                size_t num_reducer, kvlist_t* input, kvlist_t* output) {
-                    return NULL; 
-
-
-}
-/*
 void* thread_fn(void* arg) {
     size_t num = *(int*)arg;
     printf("subthread received %zu\n", num);
@@ -42,11 +21,13 @@ void* thread_fnReduce(void* arg) {
     return NULL;
 }
 
-typedef void (*mapper_t)(kvpair_t* kv, kvlist_t* output);{
+void (*mapper_t)(kvpair_t* kv, kvlist_t* output)
+{
     
     // dived input  into smaller lists.
     // ( fhfhfh ) 
     // split onto every word and send to map reduce
+    printf("subthread received %zu\n", num);
 
 }
 typedef void (*reducer_t)(char* key, kvlist_t* list, kvlist_t* output){
